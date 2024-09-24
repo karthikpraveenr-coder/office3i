@@ -1,0 +1,56 @@
+.freetrial__container{
+    padding: 50px 70px;
+}
+.left_section{
+    background-color: #0178B6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product_card_freetrial{
+    width: 100%;
+    color: black;
+}
+.col_freetrial{
+    display: flex;
+    justify-content: center;
+}
+.title_freetrial{
+    text-align: center;
+}
+
+/* right colum  */
+.right_section{
+    background: #ededed;
+}
+.freetrial_lineheight{
+    
+    line-height: 2;
+}
+.Right_title_freetrial{
+    color: #0178B6;
+    font-weight: 700;
+}
+.free_trial_quotes{
+    font-size: 20px;
+    font-weight: 400;
+    color: #007BC7;
+}
+.freetrial_submit{
+    background-color: #004A78;
+    color:white;
+    border-color: #004A78;
+    font-weight: 700;
+}
+.freetrial_formlabel{
+    font-weight: 600;
+}
+.horizontal__rule{
+    margin: 0rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 2px solid;
+    opacity: 0.25;
+    width: 100%;
+   
+}

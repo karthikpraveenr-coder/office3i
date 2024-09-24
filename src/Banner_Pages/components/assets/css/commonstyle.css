@@ -1,0 +1,57 @@
+.sec__head {
+  text-align: center;
+}
+
+.whatwedo {
+  width: 60%;
+}
+
+.sec__col__left {
+  display: flex;
+  justify-content: center;
+}
+
+/* .sec__col__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+.rigt__title {
+  color: #004A78;
+}
+
+.rigt__para {
+  color: '#001D2F'
+}
+
+.sec__head-container-left {
+  text-align: left;
+  /* Center-align the heading */
+}
+
+.sec__head-container {
+  text-align: center;
+  /* Center-align the heading */
+}
+
+.sec__head {
+  display: inline-block;
+  position: relative;
+}
+
+.sec__head::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  /* Adjust this value to control the space between the text and the underline */
+  transform: translateX(-50%);
+  /* Center the underline */
+  width: 50%;
+  /* Adjust the width of the underline */
+  height: 2px;
+  /* Adjust the thickness of the underline */
+  background-color: #004A78;
+  /* Use your theme color or any other color */
+}
+

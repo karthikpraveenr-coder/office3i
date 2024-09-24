@@ -1,0 +1,120 @@
+.top__container{
+    background-color: #004A78 !important;
+    height: 50px;
+}
+
+/* src/Header.css */
+.navbar {
+    background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+}
+
+.navbar-brand, .nav-link, .navbar-toggler-icon {
+    color: white !important;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #2D2D2D !important; /* Dark gray for hover/focus state */
+}
+
+.nav-dropdown-menu {
+    background-color: #004A78 !important;
+}
+
+.nav-dropdown-item {
+    color: white !important;
+}
+
+.nav-dropdown-item:hover, .nav-dropdown-item:focus {
+    background-color: #2D2D2D !important; /* Dark gray for hover/focus state */
+}
+.navbar-brand, .nav-link, .navbar-toggler-icon {
+    color: #004A78 !important;
+}
+.header_logo{
+    width: 150px;
+}
+.sing__in{
+    background-color: white;
+    color: #004A78;
+    border-color: #004A78;
+    font-weight: 500;
+}
+.sing__in:hover{
+    background-color: #004A78;
+    color: white;
+    border-color: #004A78;
+    font-weight: 500;
+}
+.sign__up{
+    background-color: #004A78;
+    color: white;
+    border-color: #004A78;
+    font-weight: 500;
+}
+.sign__up:hover{
+    background-color: white;
+    color: #004A78;
+    border-color: #004A78;
+    font-weight: 500;
+}
+#basic-navbar-nav{
+    font-weight: 600;
+}
+
+/* ----------------------------- */
+
+/* Default hamburger icon */
+.navbar-toggler {
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* Customizing the hamburger icon */
+.navbar-toggler-icon {
+    background-image: none;
+    width: 30px;
+    height: 3px;
+    background-color: #004A78;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Adding additional lines for the hamburger */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    background-color: #004A78;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* Change to cross when expanded (no collapsed class) */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}

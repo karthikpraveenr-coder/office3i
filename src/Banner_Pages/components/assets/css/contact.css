@@ -1,0 +1,130 @@
+.contact-page {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #F3F3F3;
+
+}
+
+.contact-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Black overlay with 60% opacity */
+    z-index: 1;
+    /* Ensure the overlay is above the image but below the content */
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.6),
+
+        );
+    /* Black gradient */
+}
+
+.contact-page .row {
+    position: relative;
+    z-index: 2;
+    /* Bring content above the gradient overlay */
+}
+
+.contact-info,
+.contact-form {
+    z-index: 2;
+}
+
+
+.contact-info {
+    color: #fff;
+    /* padding: 20px; */
+    padding-left: 10%;
+    /* background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px; */
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 4%;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.contact-form {
+    background-color: #31425e6b;
+    padding: 45px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-right: 50px;
+    /* border-color: red; */
+    border: 2px solid #8b8b8b;
+}
+
+.contact-form .form-control {
+    margin-bottom: 15px;
+}
+
+.contact-form button {
+    background-color: #1AD0FF;
+    border-color: #00aaff;
+    color: #fff;
+    /* width: 100%; */
+    /* padding: 10px; */
+    padding: 7px 30px;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #0088cc;
+    border-color: #0088cc;
+}
+
+.contact_faEnvelope {
+    padding: 11px;
+    background: #D7F7FF;
+    color: #0B3881;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.contact_faMobile {
+    padding: 12px 14px;
+    background: #D7F7FF;
+    color: #0B3881;
+    border-radius: 20px;
+    font-size: 19px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.btn__alignment {
+    display: flex;
+    justify-content: center;
+}
+
+#default-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px auto;
+}
+
+#default-container div {
+    width: 240px;
+    margin: 15px auto;
+}
+

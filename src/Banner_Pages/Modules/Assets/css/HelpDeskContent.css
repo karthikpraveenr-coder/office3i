@@ -1,0 +1,36 @@
+.helpdesk-content-container {
+    background-color: #F6F3FF;
+    border-radius: 10px;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.attendance-content-container::-webkit-scrollbar {
+    display: none;  /* For Chrome, Safari, and Opera */
+}
+
+.attendance-content-container .row {
+    padding: 30px;
+}
+
+.attendance-content-container h2 {
+    color: #004A78;
+}
+
+.content-subheading {
+    color: #004A78;
+    font-weight: bold;
+}
+
+.attendance-content-container p {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.content__text__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

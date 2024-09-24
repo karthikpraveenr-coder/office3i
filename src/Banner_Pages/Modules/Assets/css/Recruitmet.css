@@ -1,0 +1,53 @@
+.recruitment-container {
+    background-color: #8A6BE2; 
+    padding: 40px 40px 0px 40px;
+    border-radius: 10px;
+  }
+  
+  .text__section {
+    color: white;
+  }
+  .btn-container{
+    padding: 0.5rem;
+  }
+  .recruitment-button {
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    border: none;
+    background: linear-gradient(#FFFFFF 10%, #EFE9FF 67%);
+    
+  }
+  
+  .recruitment-button:hover {
+    background-color: #e8e8e8;
+  }
+  .image-section{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  /* .image-section .showcase-img {
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+  } */
+
+  .image-section .showcase-img {
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set a maximum width */
+    object-fit: contain;
+  }
+  
+  .button-group .recruitment-button{
+    font-weight: 600;
+    width: 75%;
+    display: flex;
+    gap: 7%;
+    padding: 10px 13px;
+  }
+  .recruitment__content{
+    font-size: 19px;
+  }

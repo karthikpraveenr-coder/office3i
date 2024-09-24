@@ -1,0 +1,122 @@
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border-color: #C9E0EE;
+}
+.bg-light-product{
+    background-color: rgb(248 249 250);
+}
+
+.card-title {
+    background: #004A78;
+    color: white;
+    padding: 10px;
+    border-radius: 6px 6px 0px 0px;
+    font-size: 18px;
+}
+
+.product-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.buy__btn,
+.freetrial__btn {
+    width: 100%;
+}
+
+.buy__btn {
+    background-color: #004A78;
+    border-color: #004A78;
+}
+
+.buy__btn:hover {
+    color: white;
+    background: linear-gradient(to right, #0076BF, #004A78);
+    border-color: #004A78;
+}
+
+.freetrial__btn {
+    color: #004A78;
+    background-color: white;
+    border-color: #004A78;
+}
+
+.freetrial__btn:hover {
+    background-color: #F4FBFF;
+    border-color: #004A78;
+    color: #004A78;
+}
+
+.one__time__install {
+    color: #004A78;
+    text-decoration: underline;
+}
+
+/* .foot__btn {
+    margin-top: auto;
+    padding-top: 15px;
+    text-align: center;
+} */
+
+.product__price {
+    font-size: 35px;
+    font-weight: 700;
+    color: #004A78;
+}
+
+.members {
+    background-color: #E3F4FF;
+    color: #004A78;
+    padding: 6px 0px;
+
+}
+
+.additional__members {
+    font-size: 14px;
+}
+
+/* @keyframes fadeup-product {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.product_card {
+    animation: fadeup-product 3s ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+} */
+
+
+.card-title{
+    position: relative;
+}
+.most__popular{
+    position: absolute;
+    top: -30px;
+    left: 83px;
+    background: #73C9FF;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 25px;
+    font-size: 16px;
+}

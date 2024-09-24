@@ -1,0 +1,21 @@
+.sec__head__foot {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .sec__head__foot::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    bottom: -5px;
+    /* Adjust this value to control the space between the text and the underline */
+    transform: translateX(-50%);
+    /* Center the underline */
+    width: 50%;
+    /* Adjust the width of the underline */
+    height: 2px;
+    /* Adjust the thickness of the underline */
+    background-color: #30B0FF
+    ;
+    /* Use your theme color or any other color */
+  }

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+.hero__head{
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+    /* font-size: 60px; */
+    /* display: flex; */
+    text-align: center;
+    padding: 30px 20px 30px 20px;
+}
+/* hero__head text animation */
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero__head {
+    /* font-size: 4.5rem; */
+    color: #004A78; /* Dark blue */
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+  }
+  
