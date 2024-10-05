@@ -17,7 +17,7 @@ import { ScaleLoader } from 'react-spinners';
 
 function EmployeeConfirmation() {
 
-    // ------------------------------------------------------------------------------------------------git
+    // ------------------------------------------------------------------------------------------------
 
     // Redirect to the edit page
     const navigate = useNavigate();
