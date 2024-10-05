@@ -10,8 +10,8 @@ export default function OfferLetter() {
     const navigate = useNavigate();
 
     const customerData = JSON.parse(localStorage.getItem('customerData'));
-const officialuseremail = customerData?.officialuseremail || '';
-const useremail = customerData?.useremail || '';
+    const officialuseremail = customerData?.officialuseremail || '';
+    const useremail = customerData?.useremail || '';
     const usertoken = customerData?.token || '';
 
 
@@ -79,9 +79,9 @@ const useremail = customerData?.useremail || '';
         setHeaderAttachment(null);
         setFooterAttachment(null);
         setImagePreviewUrl('');
-        setFooterImagePreviewUrl(''); 
-        headerFileInputRef.current.value = null; 
-        footerFileInputRef.current.value = null; 
+        setFooterImagePreviewUrl('');
+        headerFileInputRef.current.value = null;
+        footerFileInputRef.current.value = null;
         setDate('');
         setSalutation('');
         setName('');
@@ -165,7 +165,7 @@ const useremail = customerData?.useremail || '';
             const response = await axios.post('https://office3i.com/api/public/api/add_offer_letter', formData, {
                 headers: {
                     'Authorization': `Bearer ${usertoken}`,
-'Registered-Email': officialuseremail,
+                    'Registered-Email': officialuseremail,
                     'Content-Type': 'multipart/form-data',
                 }
             });
@@ -194,7 +194,7 @@ const useremail = customerData?.useremail || '';
         <div className="container mt-5" style={{ padding: '0px 70px 0px' }}>
             <h3 className='mb-5' style={{ fontWeight: 'bold', color: '#00275c' }}>Add Offer Letter</h3>
 
-            <div style={{ boxShadow: '#0000007d 0px 0px 10px 1px', padding: '35px 50px' }}>
+            <div style={{ boxShadow: '#0000007d 0px 0px 10px 1px', padding: '35px 50px' }} className='mb-5'>
                 <form onSubmit={handleSubmit}>
 
                     <Row className="mb-3">

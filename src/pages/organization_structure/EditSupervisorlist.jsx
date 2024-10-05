@@ -160,7 +160,15 @@ const useremail = customerData?.useremail || '';
 
     // ------------------------------------------------------------------------------------------------
 
-
+    useEffect(() => {
+        // Filter supervisor options based on the initially selected department
+        if (selectedDepartment) {
+            const filteredSupervisors = departmentOptions.filter(option => option.id !== parseInt(selectedDepartment));
+            setSupervisorOptions(filteredSupervisors);
+        } else {
+            setSupervisorOptions(departmentOptions); // Show all supervisors when no department is selected
+        }
+    }, [selectedDepartment, departmentOptions]);
 
 
     return (
@@ -185,10 +193,10 @@ const useremail = customerData?.useremail || '';
                     {/* Supervisor list slot add form */}
                     <div className='mb-5' style={{ background: '#ffffff', padding: '60px 10px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.43)', margin: '2px' }}>
                         <Row className='mb-2 '>
-                            <Col>
+                        <Col>
                                 <Form.Group controlId="formDepartmentName">
                                     <Form.Label style={{ fontWeight: 'bold' }}>Department Name</Form.Label>
-                                    <Form.Control as="select" onChange={handleDepartmentChange} value={selectedDepartment} disabled>
+                                    <Form.Control as="select" value={selectedDepartment} onChange={(e) => setSelectedDepartment(e.target.value)} disabled>
                                         <option value="">Select Department</option>
                                         {departmentOptions.map(option => (
                                             <option key={option.id} value={option.id}>{option.role_name}</option>

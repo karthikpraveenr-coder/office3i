@@ -14,13 +14,13 @@ const ViewJob = () => {
 
   const GoTolistjobPage = () => {
     navigate(`/admin/listjob`);
-};
+  };
 
   // --------------------------------------------------------------------------------------------
   // Retrieve customerData from local storage
   const customerData = JSON.parse(localStorage.getItem('customerData'));
-const officialuseremail = customerData?.officialuseremail || '';
-const useremail = customerData?.useremail || '';
+  const officialuseremail = customerData?.officialuseremail || '';
+  const useremail = customerData?.useremail || '';
   const usertoken = customerData?.token || '';
 
   const { id } = useParams();
@@ -40,7 +40,7 @@ const useremail = customerData?.useremail || '';
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${usertoken}`,
-'Registered-Email': officialuseremail
+            'Registered-Email': officialuseremail
           },
         });
         if (response.data.status === 'success') {
@@ -60,19 +60,16 @@ const useremail = customerData?.useremail || '';
 
   // --------------------------------------------------------------------------------------------
 
+ 
   // --------------------------------------------------------------------------------------------
 
-  // Utility function to strip HTML tags
-  const stripHTML = (html) => {
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
-    return tempDiv.textContent || tempDiv.innerText || '';
-  };
-  // --------------------------------------------------------------------------------------------
+  const formattedresponsiblities = viewjob?.roles_responsiblities?.replace(/\n/g, '<br />') || '';
+  const formattedcandidate = viewjob?.preferred_candidate?.replace(/\n/g, '<br />') || '';
+  const formattedbenefits = viewjob?.other_benefits?.replace(/\n/g, '<br />') || '';
 
 
   return (
-    <div className="container my-5" style={{padding:'10px 60px'}}>
+    <div className="container my-5" style={{ padding: '10px 60px' }}>
 
       {viewjob && (
         <>
@@ -100,17 +97,18 @@ const useremail = customerData?.useremail || '';
 
                 <div className="col-md-12">
                   <strong className="lh">Roles & Responsibilities</strong>
-                  <p>{stripHTML(viewjob.roles_responsiblities)}</p>
+                  <p dangerouslySetInnerHTML={{ __html: formattedresponsiblities }} />
+                 
                 </div>
 
                 <div className="col-md-12">
                   <strong className="lh">Preferred Candidate</strong>
-                  <p>{stripHTML(viewjob.preferred_candidate)}</p>
+                  <p dangerouslySetInnerHTML={{ __html: formattedcandidate }} />
                 </div>
 
                 <div className="col-md-12">
                   <strong className="lh">Other Benefits</strong>
-                  <p>{stripHTML(viewjob.other_benefits)}</p>
+                  <p dangerouslySetInnerHTML={{ __html: formattedbenefits }} />
                 </div>
 
               </div>

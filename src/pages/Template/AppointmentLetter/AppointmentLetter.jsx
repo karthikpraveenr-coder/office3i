@@ -10,8 +10,8 @@ export default function AppointmentLetter() {
     const navigate = useNavigate();
 
     const customerData = JSON.parse(localStorage.getItem('customerData'));
-const officialuseremail = customerData?.officialuseremail || '';
-const useremail = customerData?.useremail || '';
+    const officialuseremail = customerData?.officialuseremail || '';
+    const useremail = customerData?.useremail || '';
     const usertoken = customerData?.token || '';
 
     // State management
@@ -146,7 +146,7 @@ const useremail = customerData?.useremail || '';
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${usertoken}`,
-'Registered-Email': officialuseremail
+                    'Registered-Email': officialuseremail
                 }
             });
 
@@ -210,7 +210,7 @@ const useremail = customerData?.useremail || '';
     return (
         <div className="container mt-5" style={{ padding: '0px 70px 0px' }}>
             <h3 className='mb-5' style={{ fontWeight: 'bold', color: '#00275c' }}>Add Appointment Letter</h3>
-            <div style={{ boxShadow: '#0000007d 0px 0px 10px 1px', padding: '35px 50px' }}>
+            <div style={{ boxShadow: '#0000007d 0px 0px 10px 1px', padding: '35px 50px' }} className='mb-5'>
                 <form onSubmit={handleSubmit}>
                     <Row className="mb-3">
                         <Col md={6}>
@@ -353,7 +353,7 @@ const useremail = customerData?.useremail || '';
                             <div className="mb-3">
                                 <label className="form-label">Gross Salary</label>
                                 <input
-                                    type="text"
+                                    type="number"
                                     className="form-control"
                                     value={grossSalary}
                                     onChange={(e) => setGrossSalary(e.target.value)}

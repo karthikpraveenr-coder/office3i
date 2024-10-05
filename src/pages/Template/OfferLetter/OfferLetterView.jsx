@@ -11,8 +11,8 @@ const AppointmentLetterView = () => {
 
     const { id } = useParams();
     const customerData = JSON.parse(localStorage.getItem('customerData'));
-const officialuseremail = customerData?.officialuseremail || '';
-const useremail = customerData?.useremail || '';
+    const officialuseremail = customerData?.officialuseremail || '';
+    const useremail = customerData?.useremail || '';
     const usertoken = customerData?.token || '';
 
     // --------------------------------------------------------------------------------------------
@@ -21,7 +21,7 @@ const useremail = customerData?.useremail || '';
         axios.get(`https://office3i.com/api/public/api/edit_offer_list/${id}`, {
             headers: {
                 'Authorization': `Bearer ${usertoken}`,
-'Registered-Email': officialuseremail
+                'Registered-Email': officialuseremail
             }
         })
             .then(res => {
