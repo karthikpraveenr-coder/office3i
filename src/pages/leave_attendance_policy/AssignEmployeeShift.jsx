@@ -592,7 +592,7 @@ const useremail = customerData?.useremail || '';
                         <Row>
                             <Col>
                                 <Form.Group controlId="formRole">
-                                    <Form.Label style={{ fontWeight: 'bold' }}>Department Name <sup><FontAwesomeIcon icon={faStarOfLife} style={{ color: '#fb1816', fontSize: '8px' }} /></sup></Form.Label>
+                                    <Form.Label style={{ fontWeight: 'bold' }}>Role Name <sup><FontAwesomeIcon icon={faStarOfLife} style={{ color: '#fb1816', fontSize: '8px' }} /></sup></Form.Label>
                                     <MultiSelect
                                         options={formattedDepartmentDropdown}
                                         value={formattedDepartmentDropdown.filter(option => selectedDepartment.includes(option.value))}

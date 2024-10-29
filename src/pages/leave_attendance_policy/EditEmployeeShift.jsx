@@ -374,7 +374,7 @@ const useremail = customerData?.useremail || '';
                         <Row>
                             <Col>
                                 <Form.Group controlId="formDepartment">
-                                    <Form.Label>Department Name <sup><FontAwesomeIcon icon={faStarOfLife} style={{ color: '#fb1816', fontSize: '8px' }} /></sup></Form.Label>
+                                    <Form.Label>Role Name <sup><FontAwesomeIcon icon={faStarOfLife} style={{ color: '#fb1816', fontSize: '8px' }} /></sup></Form.Label>
 
                                     <MultiSelect
                                         options={formattedDepartmentDropdown}

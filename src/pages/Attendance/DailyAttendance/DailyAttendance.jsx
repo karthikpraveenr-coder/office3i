@@ -18,8 +18,8 @@ function DailyAttendance() {
 
     //  Retrieve customerData from local storage
     const customerData = JSON.parse(localStorage.getItem('customerData'));
-const officialuseremail = customerData?.officialuseremail || '';
-const useremail = customerData?.useremail || '';
+    const officialuseremail = customerData?.officialuseremail || '';
+    const useremail = customerData?.useremail || '';
 
     const usertoken = customerData?.token || '';
     const userempid = customerData?.userempid || '';
@@ -60,7 +60,7 @@ const useremail = customerData?.useremail || '';
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${usertoken}`,
-'Registered-Email': officialuseremail,
+                    'Registered-Email': officialuseremail,
                 },
                 body: JSON.stringify({
                     roleid: userrole,
@@ -271,13 +271,15 @@ const useremail = customerData?.useremail || '';
 
                     <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '10px', justifyContent: 'space-between' }}>
                         <div>
-                            <input
-                                type="text"
-                                placeholder="Search..."
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                                style={myStyles1}
-                            />
+                            {['1'].includes(userrole) &&
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    style={myStyles1}
+                                />
+                            }
                             <input
                                 type="date"
                                 style={myStyles1}

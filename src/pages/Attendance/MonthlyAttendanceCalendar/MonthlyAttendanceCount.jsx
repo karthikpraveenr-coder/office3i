@@ -863,11 +863,11 @@ const officialuseremail = customerData?.officialuseremail || '';
             {(!userrole.includes('1')) &&
               <>
                 <Button style={{ marginRight: '15px' }} onClick={openTimeOff}>
-                  Leave
+                L / P / H
                 </Button>
 
                 <Button style={{ marginRight: '15px' }} onClick={handleApplyAttendance}>
-                  Apply
+                 Attendancecls
                 </Button>
 
                 <Button onClick={handleopenOverTime}>

@@ -269,7 +269,10 @@ function EmployeeConfirmation() {
                         'Registered-Email': officialuseremail
                     }
                 });
-                setCategories(response.data.data);
+                // setCategories(response.data.data);
+
+                const filteredCategories = response.data.data.filter(category => category.employee_category !== 'Probation');
+                setCategories(filteredCategories);
             } catch (error) {
                 console.error('Oops! There was an error fetching categories:', error);
             }
